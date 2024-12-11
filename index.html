@@ -9,50 +9,64 @@
 
 </head>
 <body>
-    <script>
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker
-              .register('./service-worker.js')
-              .then((registration) => {
-                console.log('Service Worker registered with scope:', registration.scope);
-              })
-              .catch((error) => {
-                console.error('Service Worker registration failed:', error);
-              });
-          });
-        }
-        
-      </script>
-      
-    <div class="container">
-        <h1>TaskList</h1>
-        <div class="task-input">
-            <input type="text" id="task" placeholder="Enter a new task">
-            <input type="text" id="reward" placeholder="Enter reward (e.g., Voucher)">
-            <input type="text" id="topic" placeholder="Enter topic (e.g., Work)">
-            <button id="add-task">Add Task</button>
-        </div>
+    BÀI 9: MỞ RỘNG HỌC THUYẾT MENDEL
+I. TƯƠNG TÁC GIỮA CÁC ALLELE THUỘC CÙNG MỘT GENE
+1. Trội không hoàn toàn
+- Thí nghiệm: 
 
-        <button id="import-btn" class="import-btn">Setting</button>
++ Lai hai cây hoa mõm chó thuần chủng có màu hoa đỏ và màu hoa trắng với nhau thu được F1 gồm toàn cây có hoa màu hồng (kiểu hình trung gian giữa hai dạng bố mẹ).
 
-        <ul id="task-list"></ul>
-    </div>
++ Cho F1 tự thụ phấn thu được F2 có tỉ lệ phân li kiểu hình là 1 đỏ : 2 hồng : 1 trắng.
 
-    <!-- Import Popup -->
-    <div id="import-popup" class="popup">
-        <div class="popup-content">
-            <span id="close-popup" class="close">&times;</span>
-            <h2>Import Tasks</h2>
-            <div class="import-options">
-                <input type="file" id="import-file" accept=".txt">
-                <textarea id="import-text" placeholder="Or enter task data manually" rows="5"></textarea>
-                <button id="import-submit">Submit</button>
-                <button id="clear-all" class="clear-btn">Clear All Tasks</button>
-            </div>
-        </div>
-    </div>
+- Quy ước: allele A1 quy định màu hoa đỏ, allele A2 quy định màu hoa trắng.
 
-    <script src="script.js"></script>
+- Sơ đồ lai: 
+
+Ptc:          A1A1       ×        A2A2
+
+GP:         A1, A1                A2, A2
+
+F1:               A1A2 (hoa hồng)
+
+GF1:                  A1, A2
+
+F2:
+
+GF1
+
+1/2 A1
+
+1/2 A2
+
+1/2 A1
+
+1/4 A1A1
+
+1/4 A1A2
+
+1/2 A2
+
+1/4 A1A2
+
+1/4 A2A2
+
+Tỉ lệ kiểu gene: 1/4 A1A1 : 1/2 A1A2: 1/4 A2A2.
+
+Tỉ lệ kiểu hình: 1/4 hoa đỏ : 1/2 hoa hồng : 1/2 hoa trắng.
+
+- Giải thích: Cây F1 dị hợp tử A1A2 có kiểu hình trung gian giữa hai loại cây có kiểu gene đồng hợp do sản phẩm của allele A1 không đủ để lấn át sự biểu hiện của allele A2.
+
+2. Đồng trội
+- Khi cả hai allele khác nhau của cùng một gene đều biểu hiện kiểu hình riêng thì được gọi là đồng trội.
+
+II. TƯƠNG TÁC GIỮA CÁC ALLELE THUỘC CÁC GENE KHÁC NHAU
+Sản phẩm của các gene có thể tương tác với nhau cùng tham gia vào một con đường chuyển hóa tạo ra sản phẩm cuối cùng hoặc cùng tạo nên một protein.
+
+1. Sản phẩm của các gene tương tác gián tiếp với nhau
+- Mỗi allele của một gene quy định một enzyme xúc tác cho một phản ứng trong chuỗi các phản ứng hóa học hình thành nên sản phẩm chung.
+
+2. Sản phẩm của các gene tương tác trực tiếp với nhau theo kiểu cộng gộp
+- Mỗi allele trội của một gene quy định một “đơn vị” nhỏ sản phẩm góp phần cùng sản phẩm của gene khác tạo nên kiểu hình chung.
+
 </body>
 </html>
